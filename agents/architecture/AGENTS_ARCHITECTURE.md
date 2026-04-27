@@ -138,3 +138,9 @@ In particular:
 ## Final instruction
 
 If you modify the project, review and update `OUTLINE.md` before considering the work complete.
+
+## Current Architecture Note
+
+The project now has an implemented local persistence layer. The current database setup is documented in `OUTLINE.md` and initialized through `python main.py init-db`. Any future changes to database schema, storage location, backend flow, or dependencies must update `OUTLINE.md` in the same task.
+
+`main.py` also opens the local developer terminal port by default. Any future changes to terminal actions, developer intelligence commands, or entry point behavior must also be reflected in `OUTLINE.md`.

@@ -188,3 +188,8 @@ See `examples/` folder for complete examples of task files following this templa
 ## Questions or Issues
 
 If you have questions about this template or need clarification on any section, please update the task file with your questions in the "Agent Notes" section.
+
+## Current Task Files
+
+- `1_2026-04-27_database-initialization.md`: Documents the completed setup task that introduced the local SQLite database initialization flow and the initial `requests` table.
+- `2_2026-04-27_terminal-port.md`: Documents the completed feature task that introduced the interactive developer terminal port opened by `main.py`.
