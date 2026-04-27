@@ -34,7 +34,7 @@
 
 **Database Schema:** Reuses the existing SQLite `requests` table.
 
-**Configuration:** Uses the default SQLite path `data/telescreen.sqlite`.
+**Configuration:** Uses the default SQLite path `back/data/telescreen.sqlite`.
 
 **Known Issues:** The terminal port is intentionally local and developer-facing. It is not a production user interface and does not include authentication, validation beyond required text fields, or advanced intelligence gathering yet.
 

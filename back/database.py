@@ -8,7 +8,7 @@ from typing import Any
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DATABASE_PATH = PROJECT_ROOT / "data" / "telescreen.sqlite"
+DEFAULT_DATABASE_PATH = PROJECT_ROOT / "back" / "data" / "telescreen.sqlite"
 
 
 REQUESTS_SCHEMA = """

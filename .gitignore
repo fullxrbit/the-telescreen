@@ -1,4 +1,4 @@
-data/*
-!data/.gitkeep
+back/data/*
+!back/data/.gitkeep
 __pycache__/
 *.py[cod]

@@ -29,9 +29,9 @@
 - `main.py`: CLI entry point with the `init-db` command.
 - `back/database.py`: SQLite connection, schema initialization, and request helper functions.
 - `back/__init__.py`: Marks the backend as a Python package.
-- `data/.gitkeep`: Keeps the runtime data directory in git while database files remain ignored.
+- `back/data/.gitkeep`: Keeps the runtime backend data directory in git while database files remain ignored.
 
-**Database Schema:** SQLite database at `data/telescreen.sqlite` with one table:
+**Database Schema:** SQLite database at `back/data/telescreen.sqlite` with one table:
 
 ```sql
 CREATE TABLE IF NOT EXISTS requests (
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS requests (
 );
 ```
 
-**Configuration:** Uses the default database path `data/telescreen.sqlite`. A custom path can be passed with `python main.py init-db --database-path <path>`.
+**Configuration:** Uses the default database path `back/data/telescreen.sqlite`. A custom path can be passed with `python main.py init-db --database-path <path>`.
 
 **Known Issues:** There are no automated tests yet. The schema is intentionally minimal and does not include authentication, request status, scheduling, or notification delivery metadata.
 
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS requests (
 
 **Key Technologies:** Python standard library: `sqlite3`, `argparse`, and `pathlib`.
 
-**File Structure:** Runtime database files are stored under `data/`. Backend persistence code is stored under `back/`.
+**File Structure:** Runtime database files are stored under `back/data/`. Backend persistence code is stored under `back/`.
 
 **Entry Points:** Run `python main.py init-db` from the project root.
 

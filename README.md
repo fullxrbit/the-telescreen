@@ -7,7 +7,7 @@ Event notification app that connects to a Linux VPS to monitor the web periodica
 The project uses a local SQLite database for development. The database is created at:
 
 ```text
-data/telescreen.sqlite
+back/data/telescreen.sqlite
 ```
 
 Initialize it with:

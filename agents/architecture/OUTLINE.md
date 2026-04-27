@@ -16,7 +16,7 @@ Python backend utilities
 Developer terminal port
         |
         v
-SQLite database: data/telescreen.sqlite
+SQLite database: back/data/telescreen.sqlite
         |
         v
 Future web monitoring and notification services
@@ -51,10 +51,10 @@ back/
   __init__.py
   bridge_back.py
   controllers.py
+  data/
+    .gitkeep
   database.py
   terminal_port.py
-data/
-  .gitkeep
 front/
   bridge_front.md
   VIEWS.md
@@ -70,9 +70,9 @@ Contains instructions and handoff documentation for agents and developers. This 
 
 Contains backend Python code. The current backend responsibility is local database initialization, simple request persistence helpers, and the developer terminal port.
 
-### `data/`
+### `back/data/`
 
-Holds local runtime database files. The SQLite database is created at `data/telescreen.sqlite` when `python main.py init-db` is run. Database files are ignored by git; `.gitkeep` exists only so the directory can be tracked.
+Holds local backend runtime database files. The SQLite database is created at `back/data/telescreen.sqlite` when `python main.py init-db` is run. Database files are ignored by git; `.gitkeep` exists only so the directory can be tracked.
 
 ### `front/`
 
@@ -142,7 +142,7 @@ Owns SQLite database setup and request persistence helpers.
 
 More detailed explanation:
 
-The module defines `DEFAULT_DATABASE_PATH` as `data/telescreen.sqlite`. `initialize_database()` creates the database folder and the initial `requests` table. The `requests` table currently contains only the requested notification fields:
+The module defines `DEFAULT_DATABASE_PATH` as `back/data/telescreen.sqlite`. `initialize_database()` creates the database folder and the initial `requests` table. The `requests` table currently contains only the requested notification fields:
 
 - `user_id`
 - `request_title`
